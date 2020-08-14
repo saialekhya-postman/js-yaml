@@ -1,0 +1,1238 @@
+FORMAT: 1A
+HOST: http://example.com
+
+# test-bb
+fasdfasdfafsadfdsfdsfa changed to public
+
+# Group event Id
+
+## Event By EventId [/event/{eventId}{?fields[event],include}]
+
++ Parameters
+    + eventId (string, required)
+
+        (Required) event Identifier
+
+        + Sample: <string>
+
+### eventeventId [GET]
+Returns an instance of type event
++ Parameters
+    + fields[event] (string, required)
+
+        Selects the set of event fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "imageUrl": "<string>",
+                  "name": "<string>",
+                  "type": "<string>"
+                },
+                "relationships": "<object>"
+              },
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+### eventeventId1 [GET]
+Returns an instance of type event
++ Parameters
+    + fields[event] (string, required)
+
+        Selects the set of event fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "imageUrl": "<string>",
+                  "name": "<string>",
+                  "type": "<string>"
+                },
+                "relationships": "<object>"
+              },
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+
+## Event By EventId [/event/{eventId}]
+
++ Parameters
+    + eventId (string, required)
+
+        (Required) event Identifier
+
+        + Sample: <string>
+
+### eventeventId [DELETE]
+Deletes an instance of type event
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+### eventeventId [PATCH]
+Modifies an instance of type event
+
++ Request (application/vnd.api+json)
+
+    + Attributes (eventeventIdRequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "imageUrl": "<string>",
+                        "name": "<string>",
+                        "type": "<string>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+### eventeventId1 [DELETE]
+Deletes an instance of type event
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+### eventeventId1 [PATCH]
+Modifies an instance of type event
+
++ Request (application/vnd.api+json)
+
+    + Attributes (eventeventIdRequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "imageUrl": "<string>",
+                        "name": "<string>",
+                        "type": "<string>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+
+
+# Group event
+
+## Event [/event{?sort,fields[event],include,filter[event],filter,filter[event.imageUrl][infix],filter[event.name][infix],filter[event.imageUrl][in],filter[event.name][in],filter[event.imageUrl][not],filter[event.name][not],filter[event.imageUrl][prefix],filter[event.name][prefix],filter[event.imageUrl][gt],filter[event.name][gt],filter[event.imageUrl][le],filter[event.name][le],filter[event.imageUrl][notnull],filter[event.name][notnull],filter[event.imageUrl][postfix],filter[event.name][postfix],filter[event.imageUrl][ge],filter[event.name][ge],filter[event.imageUrl][isnull],filter[event.name][isnull],filter[event.imageUrl][lt],filter[event.name][lt],page[number],page[size],page[offset],page[limit],page[totals]}]
+
+### event [GET]
+Returns the collection of type event
++ Parameters
+    + sort (string, required)
+
+        Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+
+        + Sample: <string>,<string>
+    + fields[event] (string, required)
+
+        Selects the set of event fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+    + filter[event] (string, required)
+
+        Filters the collection of event using a 'disjoint' RSQL expression
+
+        + Sample: <string>
+    + filter (string, required)
+
+        Filters the collection of event using a 'joined' RSQL expression
+
+        + Sample: <string>
+    + filter[event.imageUrl][infix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator infix
+
+        + Sample: <string>
+    + filter[event.name][infix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator infix
+
+        + Sample: <string>
+    + filter[event.imageUrl][in] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator in
+
+        + Sample: <string>
+    + filter[event.name][in] (string, required)
+
+        Filters the collection of event by the attribute name using the operator in
+
+        + Sample: <string>
+    + filter[event.imageUrl][not] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator not
+
+        + Sample: <string>
+    + filter[event.name][not] (string, required)
+
+        Filters the collection of event by the attribute name using the operator not
+
+        + Sample: <string>
+    + filter[event.imageUrl][prefix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator prefix
+
+        + Sample: <string>
+    + filter[event.name][prefix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator prefix
+
+        + Sample: <string>
+    + filter[event.imageUrl][gt] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator gt
+
+        + Sample: <string>
+    + filter[event.name][gt] (string, required)
+
+        Filters the collection of event by the attribute name using the operator gt
+
+        + Sample: <string>
+    + filter[event.imageUrl][le] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator le
+
+        + Sample: <string>
+    + filter[event.name][le] (string, required)
+
+        Filters the collection of event by the attribute name using the operator le
+
+        + Sample: <string>
+    + filter[event.imageUrl][notnull] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator notnull
+
+        + Sample: <string>
+    + filter[event.name][notnull] (string, required)
+
+        Filters the collection of event by the attribute name using the operator notnull
+
+        + Sample: <string>
+    + filter[event.imageUrl][postfix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator postfix
+
+        + Sample: <string>
+    + filter[event.name][postfix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator postfix
+
+        + Sample: <string>
+    + filter[event.imageUrl][ge] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator ge
+
+        + Sample: <string>
+    + filter[event.name][ge] (string, required)
+
+        Filters the collection of event by the attribute name using the operator ge
+
+        + Sample: <string>
+    + filter[event.imageUrl][isnull] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator isnull
+
+        + Sample: <string>
+    + filter[event.name][isnull] (string, required)
+
+        Filters the collection of event by the attribute name using the operator isnull
+
+        + Sample: <string>
+    + filter[event.imageUrl][lt] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator lt
+
+        + Sample: <string>
+    + filter[event.name][lt] (string, required)
+
+        Filters the collection of event by the attribute name using the operator lt
+
+        + Sample: <string>
+    + page[number] (string, required)
+
+        Number of pages to return.  Can be used with page[size]
+
+        + Sample: <integer>
+    + page[size] (string, required)
+
+        Number of elements per page.  Can be used with page[number]
+
+        + Sample: <integer>
+    + page[offset] (string, required)
+
+        Offset from 0 to start paginating.  Can be used with page[limit]
+
+        + Sample: <integer>
+    + page[limit] (string, required)
+
+        Maximum number of items to return.  Can be used with page[offset]
+
+        + Sample: <integer>
+    + page[totals] (string, required)
+
+        For requesting total pages/records be included in the response page meta data
+
+        + Sample: <string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response1)
+
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "imageUrl": "<string>",
+                    "name": "<string>",
+                    "type": "<string>"
+                  },
+                  "relationships": "<object>"
+                },
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "imageUrl": "<string>",
+                    "name": "<string>",
+                    "type": "<string>"
+                  },
+                  "relationships": "<object>"
+                }
+              ],
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+
+## Event [/event]
+
+### event [POST]
+Creates an item of type event
+
++ Request (application/vnd.api+json)
+
+    + Attributes (eventrequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "imageUrl": "<string>",
+                        "name": "<string>",
+                        "type": "<string>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 201 (application/vnd.api+json)
+    + Attributes (Successful response2)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "imageUrl": "<string>",
+                  "name": "<string>",
+                  "type": "<string>"
+                },
+                "relationships": "<object>"
+              }
+            }
+
+
+
+
+# Group event Copy
+
+## Event [/event{?sort,fields[event],include,filter[event],filter,filter[event.imageUrl][infix],filter[event.name][infix],filter[event.imageUrl][in],filter[event.name][in],filter[event.imageUrl][not],filter[event.name][not],filter[event.imageUrl][prefix],filter[event.name][prefix],filter[event.imageUrl][gt],filter[event.name][gt],filter[event.imageUrl][le],filter[event.name][le],filter[event.imageUrl][notnull],filter[event.name][notnull],filter[event.imageUrl][postfix],filter[event.name][postfix],filter[event.imageUrl][ge],filter[event.name][ge],filter[event.imageUrl][isnull],filter[event.name][isnull],filter[event.imageUrl][lt],filter[event.name][lt],page[number],page[size],page[offset],page[limit],page[totals]}]
+
+### event [GET]
+Returns the collection of type event
++ Parameters
+    + sort (string, required)
+
+        Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+
+        + Sample: <string>,<string>
+    + fields[event] (string, required)
+
+        Selects the set of event fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+    + filter[event] (string, required)
+
+        Filters the collection of event using a 'disjoint' RSQL expression
+
+        + Sample: <string>
+    + filter (string, required)
+
+        Filters the collection of event using a 'joined' RSQL expression
+
+        + Sample: <string>
+    + filter[event.imageUrl][infix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator infix
+
+        + Sample: <string>
+    + filter[event.name][infix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator infix
+
+        + Sample: <string>
+    + filter[event.imageUrl][in] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator in
+
+        + Sample: <string>
+    + filter[event.name][in] (string, required)
+
+        Filters the collection of event by the attribute name using the operator in
+
+        + Sample: <string>
+    + filter[event.imageUrl][not] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator not
+
+        + Sample: <string>
+    + filter[event.name][not] (string, required)
+
+        Filters the collection of event by the attribute name using the operator not
+
+        + Sample: <string>
+    + filter[event.imageUrl][prefix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator prefix
+
+        + Sample: <string>
+    + filter[event.name][prefix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator prefix
+
+        + Sample: <string>
+    + filter[event.imageUrl][gt] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator gt
+
+        + Sample: <string>
+    + filter[event.name][gt] (string, required)
+
+        Filters the collection of event by the attribute name using the operator gt
+
+        + Sample: <string>
+    + filter[event.imageUrl][le] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator le
+
+        + Sample: <string>
+    + filter[event.name][le] (string, required)
+
+        Filters the collection of event by the attribute name using the operator le
+
+        + Sample: <string>
+    + filter[event.imageUrl][notnull] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator notnull
+
+        + Sample: <string>
+    + filter[event.name][notnull] (string, required)
+
+        Filters the collection of event by the attribute name using the operator notnull
+
+        + Sample: <string>
+    + filter[event.imageUrl][postfix] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator postfix
+
+        + Sample: <string>
+    + filter[event.name][postfix] (string, required)
+
+        Filters the collection of event by the attribute name using the operator postfix
+
+        + Sample: <string>
+    + filter[event.imageUrl][ge] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator ge
+
+        + Sample: <string>
+    + filter[event.name][ge] (string, required)
+
+        Filters the collection of event by the attribute name using the operator ge
+
+        + Sample: <string>
+    + filter[event.imageUrl][isnull] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator isnull
+
+        + Sample: <string>
+    + filter[event.name][isnull] (string, required)
+
+        Filters the collection of event by the attribute name using the operator isnull
+
+        + Sample: <string>
+    + filter[event.imageUrl][lt] (string, required)
+
+        Filters the collection of event by the attribute imageUrl using the operator lt
+
+        + Sample: <string>
+    + filter[event.name][lt] (string, required)
+
+        Filters the collection of event by the attribute name using the operator lt
+
+        + Sample: <string>
+    + page[number] (string, required)
+
+        Number of pages to return.  Can be used with page[size]
+
+        + Sample: <integer>
+    + page[size] (string, required)
+
+        Number of elements per page.  Can be used with page[number]
+
+        + Sample: <integer>
+    + page[offset] (string, required)
+
+        Offset from 0 to start paginating.  Can be used with page[limit]
+
+        + Sample: <integer>
+    + page[limit] (string, required)
+
+        Maximum number of items to return.  Can be used with page[offset]
+
+        + Sample: <integer>
+    + page[totals] (string, required)
+
+        For requesting total pages/records be included in the response page meta data
+
+        + Sample: <string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response1)
+
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "imageUrl": "<string>",
+                    "name": "<string>",
+                    "type": "<string>"
+                  },
+                  "relationships": "<object>"
+                },
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "imageUrl": "<string>",
+                    "name": "<string>",
+                    "type": "<string>"
+                  },
+                  "relationships": "<object>"
+                }
+              ],
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+
+## Event [/event]
+
+### event [POST]
+Creates an item of type event
+
++ Request (application/vnd.api+json)
+
+    + Attributes (eventrequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "imageUrl": "<string>",
+                        "name": "<string>",
+                        "type": "<string>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 201 (application/vnd.api+json)
+    + Attributes (Successful response2)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "imageUrl": "<string>",
+                  "name": "<string>",
+                  "type": "<string>"
+                },
+                "relationships": "<object>"
+              }
+            }
+
+
+
+
+# Group division Id
+
+## Division By DivisionId [/division/{divisionId}{?fields[division],include}]
+
++ Parameters
+    + divisionId (string, required)
+
+        (Required) division Identifier
+
+        + Sample: <string>
+
+### divisiondivisionId [GET]
+Returns an instance of type division
++ Parameters
+    + fields[division] (string, required)
+
+        Selects the set of division fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response6)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "league": "<integer>",
+                  "name": "<string>",
+                  "threshold": "<integer>"
+                },
+                "relationships": "<object>"
+              },
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+
+## Division By DivisionId [/division/{divisionId}]
+
++ Parameters
+    + divisionId (string, required)
+
+        (Required) division Identifier
+
+        + Sample: <string>
+
+### divisiondivisionId [DELETE]
+Deletes an instance of type division
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+### divisiondivisionId [PATCH]
+Modifies an instance of type division
+
++ Request (application/vnd.api+json)
+
+    + Attributes (divisiondivisionIdRequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "league": "<integer>",
+                        "name": "<string>",
+                        "threshold": "<integer>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 204 (text/plain)
+    + Attributes (object)
+
+
+
+
+
+# Group division
+
+## Division [/division{?sort,fields[division],include,filter[division],filter,filter[division.league][infix],filter[division.name][infix],filter[division.threshold][infix],filter[division.league][in],filter[division.name][in],filter[division.threshold][in],filter[division.league][not],filter[division.name][not],filter[division.threshold][not],filter[division.league][prefix],filter[division.name][prefix],filter[division.threshold][prefix],filter[division.league][gt],filter[division.name][gt],filter[division.threshold][gt],filter[division.league][le],filter[division.name][le],filter[division.threshold][le],filter[division.league][notnull],filter[division.name][notnull],filter[division.threshold][notnull],filter[division.league][postfix],filter[division.name][postfix],filter[division.threshold][postfix],filter[division.league][ge],filter[division.name][ge],filter[division.threshold][ge],filter[division.league][isnull],filter[division.name][isnull],filter[division.threshold][isnull],filter[division.league][lt],filter[division.name][lt],filter[division.threshold][lt],page[number],page[size],page[offset],page[limit],page[totals]}]
+
+### division [GET]
+Returns the collection of type division
++ Parameters
+    + sort (string, required)
+
+        Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+
+        + Sample: <string>,<string>
+    + fields[division] (string, required)
+
+        Selects the set of division fields that should be returned in the result.
+
+        + Sample: <string>,<string>
+    + include (string, required)
+
+        Selects the set of relationships that should be expanded as a compound document in the result.
+
+        + Sample: <string>,<string>
+    + filter[division] (string, required)
+
+        Filters the collection of division using a 'disjoint' RSQL expression
+
+        + Sample: <string>
+    + filter (string, required)
+
+        Filters the collection of division using a 'joined' RSQL expression
+
+        + Sample: <string>
+    + filter[division.league][infix] (string, required)
+
+        Filters the collection of division by the attribute league using the operator infix
+
+        + Sample: <string>
+    + filter[division.name][infix] (string, required)
+
+        Filters the collection of division by the attribute name using the operator infix
+
+        + Sample: <string>
+    + filter[division.threshold][infix] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator infix
+
+        + Sample: <string>
+    + filter[division.league][in] (string, required)
+
+        Filters the collection of division by the attribute league using the operator in
+
+        + Sample: <string>
+    + filter[division.name][in] (string, required)
+
+        Filters the collection of division by the attribute name using the operator in
+
+        + Sample: <string>
+    + filter[division.threshold][in] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator in
+
+        + Sample: <string>
+    + filter[division.league][not] (string, required)
+
+        Filters the collection of division by the attribute league using the operator not
+
+        + Sample: <string>
+    + filter[division.name][not] (string, required)
+
+        Filters the collection of division by the attribute name using the operator not
+
+        + Sample: <string>
+    + filter[division.threshold][not] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator not
+
+        + Sample: <string>
+    + filter[division.league][prefix] (string, required)
+
+        Filters the collection of division by the attribute league using the operator prefix
+
+        + Sample: <string>
+    + filter[division.name][prefix] (string, required)
+
+        Filters the collection of division by the attribute name using the operator prefix
+
+        + Sample: <string>
+    + filter[division.threshold][prefix] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator prefix
+
+        + Sample: <string>
+    + filter[division.league][gt] (string, required)
+
+        Filters the collection of division by the attribute league using the operator gt
+
+        + Sample: <string>
+    + filter[division.name][gt] (string, required)
+
+        Filters the collection of division by the attribute name using the operator gt
+
+        + Sample: <string>
+    + filter[division.threshold][gt] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator gt
+
+        + Sample: <string>
+    + filter[division.league][le] (string, required)
+
+        Filters the collection of division by the attribute league using the operator le
+
+        + Sample: <string>
+    + filter[division.name][le] (string, required)
+
+        Filters the collection of division by the attribute name using the operator le
+
+        + Sample: <string>
+    + filter[division.threshold][le] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator le
+
+        + Sample: <string>
+    + filter[division.league][notnull] (string, required)
+
+        Filters the collection of division by the attribute league using the operator notnull
+
+        + Sample: <string>
+    + filter[division.name][notnull] (string, required)
+
+        Filters the collection of division by the attribute name using the operator notnull
+
+        + Sample: <string>
+    + filter[division.threshold][notnull] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator notnull
+
+        + Sample: <string>
+    + filter[division.league][postfix] (string, required)
+
+        Filters the collection of division by the attribute league using the operator postfix
+
+        + Sample: <string>
+    + filter[division.name][postfix] (string, required)
+
+        Filters the collection of division by the attribute name using the operator postfix
+
+        + Sample: <string>
+    + filter[division.threshold][postfix] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator postfix
+
+        + Sample: <string>
+    + filter[division.league][ge] (string, required)
+
+        Filters the collection of division by the attribute league using the operator ge
+
+        + Sample: <string>
+    + filter[division.name][ge] (string, required)
+
+        Filters the collection of division by the attribute name using the operator ge
+
+        + Sample: <string>
+    + filter[division.threshold][ge] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator ge
+
+        + Sample: <string>
+    + filter[division.league][isnull] (string, required)
+
+        Filters the collection of division by the attribute league using the operator isnull
+
+        + Sample: <string>
+    + filter[division.name][isnull] (string, required)
+
+        Filters the collection of division by the attribute name using the operator isnull
+
+        + Sample: <string>
+    + filter[division.threshold][isnull] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator isnull
+
+        + Sample: <string>
+    + filter[division.league][lt] (string, required)
+
+        Filters the collection of division by the attribute league using the operator lt
+
+        + Sample: <string>
+    + filter[division.name][lt] (string, required)
+
+        Filters the collection of division by the attribute name using the operator lt
+
+        + Sample: <string>
+    + filter[division.threshold][lt] (string, required)
+
+        Filters the collection of division by the attribute threshold using the operator lt
+
+        + Sample: <string>
+    + page[number] (string, required)
+
+        Number of pages to return.  Can be used with page[size]
+
+        + Sample: <integer>
+    + page[size] (string, required)
+
+        Number of elements per page.  Can be used with page[number]
+
+        + Sample: <integer>
+    + page[offset] (string, required)
+
+        Offset from 0 to start paginating.  Can be used with page[limit]
+
+        + Sample: <integer>
+    + page[limit] (string, required)
+
+        Maximum number of items to return.  Can be used with page[offset]
+
+        + Sample: <integer>
+    + page[totals] (string, required)
+
+        For requesting total pages/records be included in the response page meta data
+
+        + Sample: <string>
+
++ Response 200 (application/vnd.api+json)
+    + Attributes (Successful response7)
+
+
+    + Body
+
+            {
+              "data": [
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "league": "<integer>",
+                    "name": "<string>",
+                    "threshold": "<integer>"
+                  },
+                  "relationships": "<object>"
+                },
+                {
+                  "type": "<string>",
+                  "id": "<string>",
+                  "attributes": {
+                    "league": "<integer>",
+                    "name": "<string>",
+                    "threshold": "<integer>"
+                  },
+                  "relationships": "<object>"
+                }
+              ],
+              "included": [
+                {
+                  "attributes": "<object>",
+                  "id": "<string>",
+                  "relationships": "<object>",
+                  "type": "<string>"
+                }
+              ]
+            }
+
+
+
+## Division [/division]
+
+### division [POST]
+Creates an item of type division
+
++ Request (application/vnd.api+json)
+
+    + Attributes (divisionrequest)
+
+
+    + Body
+
+            {
+                "data": {
+                    "type": "<string>",
+                    "id": "<string>",
+                    "attributes": {
+                        "league": "<integer>",
+                        "name": "<string>",
+                        "threshold": "<integer>"
+                    },
+                    "relationships": "<object>"
+                }
+            }
+
+
++ Response 201 (application/vnd.api+json)
+    + Attributes (Successful response8)
+
+
+    + Body
+
+            {
+              "data": {
+                "type": "<string>",
+                "id": "<string>",
+                "attributes": {
+                  "league": "<integer>",
+                  "name": "<string>",
+                  "threshold": "<integer>"
+                },
+                "relationships": "<object>"
+              }
+            }
+
+
+
+
+# Data Structures
+
+## Successful response (object)
+
+
+### Properties
++ `data` (Data, required) 
++ `included` (array[Included], required) 
+
+
+## Data (object)
+
+
+### Properties
++ `type` (string, required) 
++ `id` (string, required) 
++ `attributes` (Attributes, required) 
++ `relationships` (string, required) 
+
+
+## Attributes (object)
+
+
+### Properties
++ `imageUrl` (string, required) 
++ `name` (string, required) 
++ `type` (string, required) 
+
+
+## Included (object)
+
+
+### Properties
++ `attributes` (string, required) 
++ `id` (string, required) 
++ `relationships` (string, required) 
++ `type` (string, required) 
+
+
+## eventeventIdRequest (object)
+
+
+### Properties
++ `data` (Data, required) 
+
+
+## Successful response1 (object)
+
+
+### Properties
++ `data` (array[Data], required) 
++ `included` (array[Included], required) 
+
+
+## eventrequest (object)
+
+
+### Properties
++ `data` (Data, required) 
+
+
+## Successful response2 (object)
+
+
+### Properties
++ `data` (Data, required) 
+
+
+## Successful response6 (object)
+
+
+### Properties
++ `data` (Data10, required) 
++ `included` (array[Included], required) 
+
+
+## Data10 (object)
+
+
+### Properties
++ `type` (string, required) 
++ `id` (string, required) 
++ `attributes` (Attributes10, required) 
++ `relationships` (string, required) 
+
+
+## Attributes10 (object)
+
+
+### Properties
++ `league` (string, required) 
++ `name` (string, required) 
++ `threshold` (string, required) 
+
+
+## divisiondivisionIdRequest (object)
+
+
+### Properties
++ `data` (Data10, required) 
+
+
+## Successful response7 (object)
+
+
+### Properties
++ `data` (array[Data10], required) 
++ `included` (array[Included], required) 
+
+
+## divisionrequest (object)
+
+
+### Properties
++ `data` (Data10, required) 
+
+
+## Successful response8 (object)
+
+
+### Properties
++ `data` (Data10, required) 
+
