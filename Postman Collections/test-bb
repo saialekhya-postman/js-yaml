@@ -2,7 +2,7 @@ FORMAT: 1A
 HOST: http://example.com
 
 # test-bb
-fasdfasdfafsadfdsfdsfa changed to public fasdfasdfafsasffasdfasdfahanged to fasdfasdfafsadfdsfdsfa changed to public fasdfasdfafsasffasdfasdfahanged to
+fasdfasdfafsadfdsfdsfa changed to public fasdfasdfafsasffasdfasdfahanged to fasdfasdfafsadfdsfdsfa changed to pub
 
 # Group event Id
 
@@ -189,7 +189,7 @@ Modifies an instance of type event
 
 ## Event [/event{?sort,fields[event],include,filter[event],filter,filter[event.imageUrl][infix],filter[event.name][infix],filter[event.imageUrl][in],filter[event.name][in],filter[event.imageUrl][not],filter[event.name][not],filter[event.imageUrl][prefix],filter[event.name][prefix],filter[event.imageUrl][gt],filter[event.name][gt],filter[event.imageUrl][le],filter[event.name][le],filter[event.imageUrl][notnull],filter[event.name][notnull],filter[event.imageUrl][postfix],filter[event.name][postfix],filter[event.imageUrl][ge],filter[event.name][ge],filter[event.imageUrl][isnull],filter[event.name][isnull],filter[event.imageUrl][lt],filter[event.name][lt],page[number],page[size],page[offset],page[limit],page[totals]}]
 
-### event [GET]
+### event [POST]
 Returns the collection of type event
 + Parameters
     + sort (string, required)
